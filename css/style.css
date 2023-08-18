@@ -1,0 +1,405 @@
+/* rgb(135, 47, 146)   rgb(241, 182, 53)*/
+/* @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{font-family: 'PT Sans', sans-serif;}
+a{text-decoration: none;}
+ul{list-style-type: none;}
+
+/* ===============================================header=============================================== */
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    width: 100%;
+    height: 65px;
+    background-color: rgb(135, 47, 146);
+    z-index: 1000;
+}
+/* -------------------header btnAside -------------------- */
+.btnAside button{
+    background-color: rgb(135, 47, 146);
+    font-size: 30px;
+    color: white;
+    border: none;
+    transition: ease 0.5s;
+}
+.btnAside button:hover{
+    color: rgb(241, 182, 53);
+
+}
+/* -------------------header logo -------------------- */
+header .logo a{
+    display: flex;
+    align-items: center;
+}
+header img{
+    width: 55px;
+    height: 55px;
+    margin-right:5px ;
+}
+header .logo h1{
+    text-shadow:0 0 3px  #ffffff,0 0 3px  #ffffff;
+    color: rgb(255, 0, 0);
+    transition: ease 1s;
+}
+header span{
+    text-shadow: none;
+    color: rgb(255, 255, 255);
+}
+/* -------------------header navBar -------------------- */
+.navBar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navBar a{
+    padding: 15px 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-top-left-radius:40px ;
+    border-top-right-radius:40px ;
+    transition: ease 0.7s;
+    position: relative;
+    display: block;
+    justify-content: center;
+}
+.navBar a:hover{
+    background-color: white;
+    color: rgb(135, 47, 146);
+}
+.navBar a::before{
+    content: "";
+    position:absolute;
+    top:70%;
+    left: 0;
+    text-align: center;
+    width: 0;
+    height: 4px;
+    transition: ease 0.7s;
+    background-color: rgb(135, 47, 146);
+}
+.navBar a:hover::after{
+    width: 100%;
+}
+/**/
+.navBar a::after{
+    content: "";
+    position:absolute;
+    top:85%;
+    right:  0;
+    text-align: center;
+    width: 0;
+    height: 4px;
+    transition: ease 0.7s;
+    background-color: rgb(135, 47, 146);
+}
+.navBar a:hover::before{
+    width: 100%;
+}
+/* -------------------header aside -------------------- */
+
+aside{
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 0 0;
+    background-color:rgba(61, 61, 60, 0.822) ;
+    border-top: solid white 2px;
+    visibility: hidden;
+    z-index: 999;
+    transition: ease 1s;
+}
+aside ul{
+    /* display: flex; */
+    width: 100%;
+    flex-direction: column ;
+}
+aside ul li{width: 100%;}
+aside a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px 0;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    transition: ease 0.7s;
+    position: relative;
+    z-index:1000;
+}
+/* aside a:hover{
+    border-right: solid rgb(135, 47, 146) 50px;
+    border-left: solid white 50px;
+    background-color: rgb(241, 182, 53);
+    color: black;
+} */
+/**************before&after******/
+aside a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height:10px;
+    background-color: rgb(0, 155, 21);
+    transition: ease 0.5s;
+    z-index: 6;
+}
+aside a:hover::before{
+    width: 100%;
+}
+aside a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height:10px;
+    background-color: rgb(172, 30, 30);
+    transition: ease 0.5s;
+    z-index: 6;
+}
+aside a:hover::after{
+    width: 100%;
+}
+/**************before&after******/
+main{
+    margin-top: 65px;
+}
+/* -------------------start  cards -------------------- */
+.card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+}
+.card-1{
+    background-image:url(../images/pizza_1.jpg) ;
+}
+.card-2{
+    background-image:url(../images/panini-1920x1080-ham-cheese-salad-bread-baske-462.jpg) ;
+}
+.card-3{
+    background-image:url(../images/burger-1920x1080-steak-fire-fast-food-pepper-5k-17806.jpg) ;
+}
+.card-4{
+    background-image:url(../images/cheeseburger-1920x1080-fast-food-french-fries-cheese-steak-coca-cola-627.jpg) ;
+}
+.card::after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+.imageCard{
+    position: absolute;
+    left: 15%;
+}
+.imageCard img{
+    border-radius: 30px;
+    width: 350px;
+    height: 350px;
+}
+/* ===============start infoCard================ */
+.infoCard{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    flex-direction: column;
+    right: 15%;
+    width: 500px;
+    height: 350px;
+}
+.infoCard .headInfoCard,.descInfoCard,.btnsInfoCard{
+    margin: 10px 0;
+}
+/* ==============start headInfoCard============ */
+.headInfoCard{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.headInfoCard h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+.headInfoCard  .title{
+    color: rgb(241, 182, 53);
+}
+.headInfoCard  .price{
+    color: white;
+}
+.headInfoCard .price span{
+    margin: 0 5px;
+    color: rgb(241, 182, 53);
+}
+/* ==============end headInfoCard============ */
+/* ==============start descInfoCard============ */
+.descInfoCard p{
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+}
+/* ==============end descInfoCard============ */
+
+/* ==============start btnsInfoCard============ */
+.btnsInfoCard{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+.btnsInfoCard a{
+    color: rgb(241, 182, 53);
+    background-color: rgba(255, 255, 255, 0.082);
+    padding: 15px 30px;
+    font-size: 25px;
+    font-weight: 600;
+    border: solid rgb(241, 182, 53) 2px;
+    border-radius: 50px;
+}
+.btnsInfoCard a:hover{
+    color: black;
+    background-color: rgb(241, 182, 53);
+    border: solid white 2px;
+}
+/* ==============end btnsInfoCard============ */
+
+/* ===============end infoCard================ */
+/* ===============================start sectionServices=========================== */
+.sections{
+    text-align: center;
+    background-color: rgb(216, 214, 214);
+    padding-bottom: 50px;
+    box-shadow: 0 0 10px  black inset;
+}
+.sections h1{
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(241, 182, 53);
+    text-shadow: 0 0 3px black,0 0 3px black;
+}
+
+.sectionCards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+.sectionCards .sectionCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    max-width: 500px;
+    height: 250px;
+    padding: 5px;
+    border: solid rgba(156, 156, 156, 0.651) 3px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    transition: ease 0.6s;
+}
+.sectionCards .sectionCard:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px black;
+}
+.sectionCards .sectionCard img{
+    width: 200px;
+    height: 200px;
+}
+.sectionCards .sectionCard h2{
+    display: flex;
+    justify-content: center;
+    color: rgb(135, 47, 146);
+    font-size: 25px;
+    font-weight: bolder;
+}
+/* ===============================end sectionServices=========================== */
+
+/* ===============start footer================ */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background-color: rgb(31, 27, 27);
+    width: 100%;
+}
+/* ==========start paidFooter============ */
+.paidFoot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.paidFoot h3{color: white;}
+.paidFoot ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 10px 0;
+}
+.paidFoot ul li{margin: 0 15px ;}
+.paidFoot img{
+    width: 35px;
+}
+/* ==========end paidFooter============ */
+
+/* ==========start logoFoot============ */
+.logoFoot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logoFoot img{
+    margin-bottom: 20px;
+    width: 100px;
+}
+.logoFoot h2{
+    color: white;
+}
+.logoFoot h2 span{
+    margin: 0 5px;
+    color:rgb(241, 182, 53) ;
+}
+/* ==========end logoFoot============ */
+
+/* ==========start socialFoot============ */
+.socialFoot img{width: 30px;
+margin-right: 5px;}
+.socialFoot a{
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    color: rgb(241, 182, 53);
+    font-weight: 200;
+    font-size: 16px;
+}
+
+/* ==========end socialFoot============ */
+
+/* ===============end footer================ */
+
+/* =====================media query=============== */
